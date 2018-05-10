@@ -1,0 +1,15 @@
+{%- for script in site.body_scripts -%}
+  <script src="{{script}}" type="text/javascript"></script>
+{%- endfor -%}
+<script>
+  function init (){
+    console.log("init!");
+  }
+  init();
+
+  $(document).ready(function(){
+    console.log("document ready!");
+    // Barba.Pjax.start();
+    console.log("Barba: " ,Barba);
+  });
+</script>

@@ -24,9 +24,32 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jonaseltes
 github_username:  jonaseltes
 
+# Scripts
+head_scripts:
+  - /assets/js/jquery.min.js
+  - /assets/js/Tween.js
+  - /assets/js/three.min.js
+  - /assets/js/OrbitControls.js
+  - /assets/js/OBJLoader.js
+  - /assets/js/barba.min.js
+
+body_scripts:
+
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
+
 # Build settings
 markdown: kramdown
-theme: minima
+#theme: minima
 plugins:
   - jekyll-feed
 
