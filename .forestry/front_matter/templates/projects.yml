@@ -1,0 +1,89 @@
+---
+pages:
+- _projects/lost_in_computation/lost-in-computation.html
+- _projects/impressionist/impressionist.html
+hide_body: false
+is_partial: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: type
+  label: Type
+  type: text
+  hidden: false
+  default: ''
+- name: year
+  label: Year
+  type: text
+  hidden: false
+  default: ''
+- name: month
+  label: Month
+  type: text
+  hidden: false
+  default: ''
+- name: picture
+  label: Picture
+  type: text
+  hidden: false
+  default: ''
+- name: exhibitions
+  label: Exhibitions
+  type: field_group_list
+  fields:
+  - name: name
+    label: Name
+    type: text
+    hidden: false
+    default: ''
+  - name: institution
+    label: Institution
+    type: field_group_list
+    fields:
+    - name: name
+      label: Name
+      type: text
+      hidden: false
+      default: ''
+    - name: url
+      label: Url
+      type: text
+      hidden: false
+      default: ''
+    - name: country
+      label: Country
+      type: text
+      hidden: false
+      default: ''
+    - name: city
+      label: City
+      type: text
+      hidden: false
+      default: ''
+    hidden: false
+    default: ''
+  - name: year
+    label: Year
+    type: text
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+- name: description
+  label: Description
+  type: text
+  hidden: false
+  default: ''
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: project
