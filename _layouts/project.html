@@ -1,10 +1,182 @@
 ---
 layout: default
 ---
-<header class="post-header">
-  <h1 class="post-title">{{ page.title }}</h1>
-</header>
 
-<div class="post-content">
-  {{ content }}
+<div class="container-fluid project-container">
+
+
+  <div class="row flex-row align-items-center mb-5">
+
+    {% for image in page.images %}
+      {% if image.project == true %}
+        {% if forloop.first == false %}
+        <div class="col-12 mt-5">
+        {% else %}
+        <div class="col-12">
+        {% endif %}
+        <img src="{{site.baseurl}}/{{site.image_path}}/{{image.url}}" alt="{{titleImage.title}}" width="100%" />
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    <!-- <div class="col-xs-12">
+        <img src="{{site.baseurl}}/{{site.image_path}}/{{page.images[0].url}}" alt="{{titleImage.title}}" width="100%" />
+    </div> -->
+
+  </div>
+
+
+  <div class="row mb-4 mb-md-6">
+
+    <div class="col-md-12 col-xl-6 offset-0">
+      <div class="mb-5 offset-md-0 text-left">
+        <span class="d-block project-title">{{ page.title }}</span>
+        <span class="d-block text-black-50">({{ page.year }})</span>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-xl-3">
+      <div class="row">
+        <div class="col-lg-12">
+          <span class="project-header-info-title d-block">
+            Comissioner / Client
+          </span>
+        </div>
+        <div class="col-lg-12">
+          <span class="project-header-info d-block">
+            {{page.organization}}{% if page.location %}, {{page.location.city}} <span class="text-uppercase">({{page.location.country.short}})</span>{% endif %}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-xl-3">
+      <div class="row">
+        <div class="col-sm-12">
+          <span class="project-header-info-title d-block">
+            Details
+          </span>
+        </div>
+        <div class="col-lg-12">
+          <span class="d-block project-header-info">
+            {% for item in page.technology %}
+                {{item}}{% if forloop.last == false %},{% endif %}
+            {% endfor %}
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-sm-6">
+      <div class="d-block">
+        {{ content }}
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="row">
+
+        <div class="col-lg">
+
+          {% if page.credits %}
+            <div class="row">
+              <div class="col-sm-12">
+                <span class="project-info-title d-block">
+                  Credits
+                </span>
+                <div class="project-info">
+                  {% for item in page.credits %}
+                    <span class="d-block">
+                      <span class="d-block text-black-50">{{item.name}} ({{item.role}})</span>
+                    </span>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if page.links %}
+            <div class="row">
+              <div class="col-sm-12">
+                <span class="project-info-title d-block">
+                  Links
+                </span>
+                <div class="project-info">
+                  {% for item in page.links %}
+                    <span class="d-block">
+                      <a href="{{item.url}}" target="_blank" class="text-black-50">{{item.label}} →</a>
+                    </span>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if page.exhibitions %}
+          <div class="row">
+            <div class="col-sm-12">
+              <span class="project-info-title d-block">
+                Exhibitions
+              </span>
+            </div>
+            <div class="col-lg-12">
+              <div class="project-info">
+                {% assign exhibitions = page.exhibitions | reverse %}
+                {% for item in exhibitions %}
+                  {% assign exhibition = site.data.exhibitions[item] %}
+                  <span class="d-block">
+                    {{exhibition.title}} – {{exhibition.location.name}}, {{exhibition.location.city}} <span class="text-uppercase">({{exhibition.location.country.short}})</span>, {{exhibition.time.start || date: '%Y'}}
+                  </span>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+
+          {% if page.press %}
+            <div class="row">
+              <div class="col-sm-12">
+                <span class="project-info-title d-block">
+                  Press
+                </span>
+                <div class="project-info">
+                  {% for item in page.press %}
+                    <span class="d-block">
+                      <a href="{{item.url}}" class="text-black-50" target="_blank">{{item.label}}</a>
+                    </span>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- {% for image in page.images %}
+    <div class="col-12 mt-5">
+      {% if forloop.first == false %}
+            <img src="{{site.baseurl}}/{{site.image_path}}/{{image.url}}" alt="{{titleImage.title}}" width="100%" />
+      {% endif %}
+    </div>
+    {% endfor %} -->
+
+
+  </div>
+
+
+
+
+  <div class="footer-wrapper w-100 invisible">
+    {%- include footer.html -%}
+  </div>
+
+
 </div>

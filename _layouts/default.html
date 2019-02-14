@@ -4,17 +4,35 @@
   {%- include head.html -%}
 
   <body>
+    <div class="wrapper">
 
-    {%- include header.html -%}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
+      <div class="header-wrapper w-100 fixed-top">
+        {%- include header.html -%}
       </div>
-    </main>
 
-    {%- include footer.html -%}
+      <div class="content-wrapper d-flex flex-column w-100 h-100">
+        <div class="header-wrapper w-100 invisible">
+          {%- include header.html -%}
+        </div>
+        <!-- <main class="page-content" aria-label="Content"> -->
+        <div class="content-container flex-grow-1">
+            {{ content }}
+        </div>
+        <!-- </main> -->
+        <div class="footer-wrapper w-100 invisible">
+          {%- include footer.html -%}
+        </div>
+      </div>
+
+      <div class="footer-wrapper w-100 fixed-bottom">
+        {%- include footer.html -%}
+      </div>
+
+    </div>
+
     {%- include body-scripts.html -%}
+    {%- include page-scripts.html -%}
+
   </body>
 
 </html>

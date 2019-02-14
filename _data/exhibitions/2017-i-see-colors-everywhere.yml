@@ -1,0 +1,20 @@
+title: I See Colors Everywhere
+url: //www.fabrica.it/see-colors-everywhere-2/
+description: Etiam porta sem malesuada magna mollis euismod.
+time:
+  start: 2017-09-24
+  end: 2017-09-28
+  duration: 4 days
+charachter: exhibition
+type: group
+organizations:
+  - FABRICA
+  - United Colors of Benetton
+location:
+  name: Triennale
+  url: http://www.triennale.org/en/
+  city: Milan
+  country:
+      full: Italy
+      short: it
+  map: https://goo.gl/maps/vm3uSjS6Cek

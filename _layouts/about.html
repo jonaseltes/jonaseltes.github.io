@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+
+<!--<header class="post-header">
+  <h1 class="post-title">{{ page.title | escape }}</h1>
+</header>-->
+
+<div class="about container-fluid">
+
+  <div class="row flex-row align-items-start">
+
+    <div class="col-sm">
+      <img class="mb-4" src="{{site.url}}/{{site.image_path}}/jonas_eltes.jpg" width="100%" class=""/>
+    </div>
+
+    <div class="col-sm">
+
+      <div class="row">
+        <div class="col">
+          <div class="">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <span class="project-info-title d-block">
+            Exhibitions
+          </span>
+
+          <div class="project-info">
+            {% assign sorted = (site.data.exhibitions | sort: time.start) | reverse %}
+            {% for exhibition in sorted %}
+              {% assign mod = forloop.index | modulo: 2 %}
+                {% if mod == 1 %}
+                  <span class="d-block">
+                    {{exhibition.title}} – {{exhibition.location.name}} ({{exhibition.location.country.full}}), {{exhibition.time.start || date: '%Y'}}
+                  </span>
+                {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <span class="project-info-title d-block">
+            Honors
+          </span>
+          <div class="project-info">
+            {% for item in site.data.honors %}
+              <span class="d-block">
+                {{item.title}}, {{item.year}}
+              </span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-wrapper w-100 invisible">
+    {%- include footer.html -%}
+  </div>
+
+</div>

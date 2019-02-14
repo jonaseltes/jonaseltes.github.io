@@ -1,0 +1,19 @@
+title: 'Athens Digital Art Fetival (14th) | Singularity Now'
+url: www.adaf.gr
+description: Etiam porta sem malesuada magna mollis euismod.
+time:
+  start: 2018-05-24
+  end: 2018-05-27
+  duration: 4 days
+charachter: Festival
+type: group
+organizations:
+  - Athens Digital Art Festival
+location:
+  name: Megaron Athens Concert Hall
+  url: www.adaf.gr
+  city: Athens
+  country:
+      full: Greece
+      short: gr
+  map: https://goo.gl/maps/3phbCe2t7a72

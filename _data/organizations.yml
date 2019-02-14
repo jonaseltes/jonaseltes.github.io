@@ -1,0 +1,19 @@
+- name: FABRICA
+  url: www.fabrica.it
+  description:
+  location:
+    city: Treviso
+    country:
+      full: Italy
+      short: it
+    map: https://goo.gl/maps/udqKAZZ3MGo
+
+- name: Google Creative Lab
+  url: https://www.google.com/intl/en_se/about/
+  description:
+  location:
+    city: London
+    country:
+      full: United Kingdom
+      short: uk
+    map: https://goo.gl/maps/4dntdFKjzm42

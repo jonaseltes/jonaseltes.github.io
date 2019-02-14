@@ -1,0 +1,19 @@
+title: 'Google I/O'
+url: 'https://events.google.com/io2016/'
+description: Etiam porta sem malesuada magna mollis euismod.
+time:
+  start: 2016-05-18
+  end: 2016-05-20
+  duration: 3 days
+charachter: Festival
+type: group
+organizations:
+  - Google
+location:
+  name: 'Shoreline Amphitheatre'
+  url: 'http://www.mountainviewamphitheater.com/'
+  city: Mountain View, CA
+  country:
+      full: United States
+      short: us
+  map: 'https://goo.gl/maps/qRucwKDp3E22'

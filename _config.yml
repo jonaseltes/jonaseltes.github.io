@@ -15,30 +15,41 @@
 # in the templates via {{ site.myvariable }}.
 title: Jonas Eltes
 email: contact@jonaselt.es
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: 'Swedish New Media Artist & Designer.'
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://jonaselt.es" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jonaseltes
 github_username:  jonaseltes
+instagram_username: jonaselt.es
+image_path: assets/media
+js_path: assets/js
+css_path: assets/css
 
 # Scripts
 head_scripts:
   - /assets/js/jquery.min.js
   - /assets/js/Tween.js
   - /assets/js/three.min.js
+  - /assets/js/Projector.js
+  - /assets/js/CanvasRenderer.js
   - /assets/js/OrbitControls.js
+  - /assets/js/TrackballControls.js
   - /assets/js/OBJLoader.js
   - /assets/js/barba.min.js
+  - /assets/js/perlin.js
 
 body_scripts:
+  - //code.jquery.com/jquery-3.2.1.min.js
+  - //cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js
+  - //maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js
 
 collections:
   projects:
     output: true
     permalink: /:collection/:name/
+  exhibitions:
+    output: false
+
 
 defaults:
   - scope:
@@ -46,6 +57,10 @@ defaults:
       type: "projects"
     values:
       layout: project
+  - scope:
+      path: "assets/media"
+    values:
+      image: true
 
 # Build settings
 markdown: kramdown
@@ -56,11 +71,13 @@ plugins:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - _projects/natura
+  - log.md

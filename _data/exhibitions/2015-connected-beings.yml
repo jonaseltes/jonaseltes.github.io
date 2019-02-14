@@ -1,0 +1,19 @@
+title: 'Connected Beings'
+url: 'https://www.mobileworldcentre.com/connectedbeings'
+description: Etiam porta sem malesuada magna mollis euismod.
+time:
+  start: 2015-03-02
+  end: 2015-30-06
+  duration: 4 months
+charachter: Museum
+type: group
+organizations:
+  - Mobile World Capital Barcelona
+location:
+  name: 'Mobile World Centre'
+  url: 'https://www.mobileworldcentre.com/en/home'
+  city: Barcelona
+  country:
+      full: Spain
+      short: es
+  map: 'https://goo.gl/maps/Bg6C3TWMbWz'

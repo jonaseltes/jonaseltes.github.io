@@ -1,34 +1,52 @@
 ---
 layout: default
+scripts:
+  cdn:
+    - //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js
+  assets:
+    - canvas.js
+    - main.js
+css:
+    - //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css
+    - //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css
+    - assets/css/index.css
+menu: light
+footer: light
+featured-image: 'assets/media/mirror.png'
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+<div class="container-fluid h-100 position-absolute">
+  <div class="row h-100">
+    <div class="col h-100 mh-100">
+      <canvas id="canvas2D" width="500" height="500"></canvas>
+      <canvas id="canvas3D" class="poiner-e" width="500" height="500"></canvas>
+      <div data-slick='{"slidesToShow": 1, "slidesToScroll": 1}' class="slick-carousel position-fixed d-none">
+        {% for slide in site.data.slides %}
+          <!-- <h2>{{ item.title }}</h2> -->
+          <!-- <p>{{ item.description }}</p> -->
+          <div class="slick-slide desaturate" style="background: url('{{site.baseurl}}/{{site.image_path}}/{{slide.image}}') no-repeat center {{slide.align}}">
+          </div>
+          <!-- <img src="{{site.baseurl}}/{{site.image_path}}/{{item.image}}" alt="{{titleImage.title}}" /> -->
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
 
-  {{ content }}
+    <!-- <div class="alpha-overlay-w fixed-top w-100 h-100"></div> -->
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
-  {%- endif -%}
-
+<div class="container-fluid h-100 position-absolute no-pointer-e no-pointer-e-all">
+  <div class="row h-100 d-flex align-items-center">
+    <div class="h-100 w-100 position-relative text-center d-flex">
+      <div class="d-inline-block m-auto front-title text-black">
+        <div id="loading-text">
+          <span class="text-uppercase">Loading...</span>
+        </div>
+        <div id="landing-text">
+          <div id="landing-title" class="text-uppercase">New Media Artist & Designer</div>
+          <div id="landing-year" class="text-uppercase text-black-50">(1993, Sweden)</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

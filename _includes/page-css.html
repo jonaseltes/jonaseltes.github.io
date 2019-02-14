@@ -1,0 +1,11 @@
+<!--{%- for item in layout.css.cdn -%}
+  <link rel="stylesheet" href="{{ item }}">
+{%- endfor -%}
+
+{%- for item in layout.css.assets -%}
+  <link rel="stylesheet" href="{{site.css_path}}/{{item}}">
+{%- endfor -%}-->
+
+{%- for css in layout.css -%}
+  <link rel="stylesheet" href="{{css}}">
+{%- endfor -%}

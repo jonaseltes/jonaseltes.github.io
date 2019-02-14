@@ -1,0 +1,35 @@
+- name: FABRICA Research Centre
+  type: Recidency / Fellowship
+  description:
+  location:
+    city: Treviso
+    country:
+      full: Italy
+      short: it
+  time:
+    start: 2016-10-11
+    end: 2017-12-31
+
+- name: Google Creative Lab
+  type: Fellowship
+  description: Google 5
+  location:
+    city: London
+    country:
+      full: United Kingdom
+      short: uk
+  time:
+    start: 2013-08-15
+    end: 2014-08-14
+
+- name: Berghs School of Communication
+  type: Education (Diploma)
+  description: Interactive Communication
+  location:
+    city: Stockholm
+    country:
+      full: Sweden
+      short: se
+  time:
+    start: 2012-06-15
+    end: 2013-07-15

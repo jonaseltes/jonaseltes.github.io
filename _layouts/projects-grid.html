@@ -1,0 +1,33 @@
+---
+layout: default
+css:
+    - ../assets/css/projects.css
+---
+
+
+  <!--<header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>-->
+
+  {% assign projects = site.projects | sort: 'year' | reverse %}
+
+  <div class="projects container-fluid">
+    <div class="row flex-row">
+        {% for item in projects %}
+          <!-- <div class="col-md-4 col-lg-4 pb-7 align-self-end offset-md-{{ forloop.index | minus:1 || modulo:3 || times: 2}}"> -->
+          <div class="col-sm-6 col-md-4 col-lg-6 pb-7 align-self-end">
+            <div class="text-center m-auto projects-col">
+              <a href="{{ item.url }}">
+                  <img src="{{site.baseurl}}/{{site.image_path}}/{{item.images[0].url}}" width="100%" class="mb-4 greyscale" />
+                  <div class="w-75 mx-auto">
+                    <!-- {{ forloop.index | minus:1 || modulo:3}}_ -->
+                    <span class="d-block">{{ item.title }}</span>
+                    <span class="d-block">({{item.year}})</span>
+                  </div>
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+      <!-- </div> -->
+    </div>
+  </div>

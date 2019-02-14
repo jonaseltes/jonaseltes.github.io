@@ -1,0 +1,19 @@
+title: 'Into the Wild: Decoding the Creative Journey'
+url: http://mv.works/about/into-the-wild/
+description: Etiam porta sem malesuada magna mollis euismod.
+time:
+  start: 2016-06-09
+  end: 2016-06-12
+  duration: 3 days
+charachter: Museum
+type: group
+organizations:
+  - Makerversity
+location:
+  name: 'Somerset House'
+  url: https://www.somersethouse.org.uk/
+  city: London
+  country:
+      full: United Kingdom
+      short: uk
+  map: https://goo.gl/maps/ikKjMuuw58s

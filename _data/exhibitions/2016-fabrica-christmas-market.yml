@@ -1,0 +1,18 @@
+title: 'FABRICA Christmas Market'
+description: Etiam porta sem malesuada magna mollis euismod.
+time:
+  start: 2016-12-04
+  end: 2016-12-05
+  duration: 1 day
+charachter: Institution
+type: group
+organizations:
+  - FABRICA
+location:
+  name: 'FABRICA Research Centre'
+  url: http://www.fabrica.it/
+  city: Treviso
+  country:
+      full: Italy
+      short: it
+  map: https://goo.gl/maps/6tjNpyMRUgz
