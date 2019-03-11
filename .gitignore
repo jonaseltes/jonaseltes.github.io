@@ -5,6 +5,7 @@ vendor
 _site
 .sass-cache
 .jekyll-metadata
+.forestry
 
 # OS generated files #
 ######################
