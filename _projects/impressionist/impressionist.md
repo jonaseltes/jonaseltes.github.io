@@ -27,6 +27,7 @@ credits:
 exhibitions:
   - 2017-i-see-colors-everywhere
   - 2018-athens-digital-art-festival
+  - 2019-arte-laguna
 technology:
   - Raspberry Pi
   - Raspberry pi Camera
