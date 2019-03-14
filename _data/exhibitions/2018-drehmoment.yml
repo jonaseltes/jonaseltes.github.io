@@ -1,0 +1,20 @@
+title: Drehmoment Festival
+url: https://www.kulturregion-stuttgart.de/en/drehmoment.html
+description: Etiam porta sem malesuada magna mollis euismod.
+time:
+  start: 2018-10-04
+  end: 2018-10-31
+  duration: 1 months
+charachter: Festival
+type: group
+organizations:
+  - KulturRegion Stuttgart
+  - Klett-Cotta
+location:
+  name: 'Stuttgart Public Lilbrary'
+  url: http://www1.stuttgart.de/stadtbibliothek/
+  city: Stuttgart
+  country:
+      full: Germany
+      short: de
+  map: https://goo.gl/maps/1Cidd9Dp3YP2
