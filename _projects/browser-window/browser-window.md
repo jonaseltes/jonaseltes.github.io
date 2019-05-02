@@ -18,7 +18,6 @@ location:
       full: Italy
       short: it
 exhibitions:
-  - 2017-i-see-colors-everywhere
 technology:
   - Canvas
   - LED Screen
