@@ -26,8 +26,8 @@ technology:
   - WebVR
   - Socket.IO
 links:
-  - label: 'canvas.jonaselt.es'
-    url: 'http://canvas.jonaselt.es/'
+  - label: 'Demo video'
+    url: 'http://jonaselt.es/assets/media/imago-mundi.mp4'
 ---
 
 Imago Mundi is the collection of works commissioned and collected by Luciano Benetton on his travels around the world, involving, established and emerging artists from many different countries. Each of them has created a work whose only restriction is its 10x12 cm format, contributing to the creation of a remarkable artistic geography.
