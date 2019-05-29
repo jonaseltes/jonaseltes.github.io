@@ -217,9 +217,9 @@ function loadProjects(){
             function(texture){
               numberOfLoadedTextures++;
               var loadingprogress = Math.floor(numberOfLoadedTextures/numberOfTextures);
-              $('#landing-text').text('Loading '+loadingprogress+'%');
+              $('#loading-text').text('Loading '+loadingprogress+'%');
               if (numberOfLoadedTextures == numberOfTextures) {
-                $('#landing-text').text('Loading 100%');
+                $('#loading-text').text('Loading 100%');
                 console.log("done loading images!");
                 $(canvas3D).fadeIn(300);
                 $('#loading-text').fadeOut(300, function(){
