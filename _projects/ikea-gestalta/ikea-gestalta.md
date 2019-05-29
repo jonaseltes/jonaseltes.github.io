@@ -9,7 +9,7 @@ images:
     project: true
   - url: ikea-gestalta-2.gif
     align: bottom
-    landing: true
+    landing: false
     project: true
   - url: ikea-gestalta-3.jpg
     align: bottom
